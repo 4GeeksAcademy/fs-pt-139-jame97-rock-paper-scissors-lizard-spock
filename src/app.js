@@ -1,11 +1,11 @@
 //write your code here
-const juego = (userChoise) => {
-    const opcionUsuario = userChoise;
+const game = (userChoise) => {
+    const userOption = userChoise;
     const choises = ["rock", "paper", "scissors", "lizard", "spock"];
-    
-    
+
+
     const randomIndex = Math.floor(Math.random() * choises.length);
-    const opcionComputadora = choises[randomIndex];
+    const computerOption = choises[randomIndex];
 
 
     const rules = {
@@ -17,15 +17,15 @@ const juego = (userChoise) => {
     };
 
 
-    if (opcionUsuario === opcionComputadora) {
-        return `User choice: ${opcionUsuario}, Sheldon choice: ${opcionComputadora} -> It's a tie! (Sheldon thinks you cheated)`;
+    if (userOption === computerOption) {
+        return `User choice: ${userOption}, Sheldon choice: ${computerOption} -> It's a tie! (Sheldon thinks you cheated)`;
     }
 
-    if (rules[opcionUsuario].includes(opcionComputadora)) {
-        return `User choice: ${opcionUsuario}, Sheldon choice: ${opcionComputadora} -> You win! (Sheldon cry and thinks you cheated)`;
+    if (rules[userOption].includes(computerOption)) {
+        return `User choice: ${userOption}, Sheldon choice: ${computerOption} -> You win! (Sheldon cry and thinks you cheated)`;
     }
 
-    return `User choice: ${opcionUsuario}, Sheldon choice: ${opcionComputadora} -> Sheldon wins, Bazinga!`;
+    return `User choice: ${userOption}, Sheldon choice: ${computerOption} -> Sheldon wins, Bazinga!`;
 };
 
-console.log(juego("paper"));
+console.log(game("spock"));
